@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-include 'simulator'
+require_relative '../simulator/simulator.rb'
 
 describe returnNil do
   context 'when called' do
