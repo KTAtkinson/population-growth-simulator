@@ -1,5 +1,6 @@
 Gem::Specification.new do |gem|
   gem.name          = "population_growth_simulator"
+  gem.version       = "0.0.1.pre"
   gem.authors       = ["Katie Atkinson"]
   gem.email         = ["katie@atkinson.mn"]
   gem.description   = "gem models population growth"
