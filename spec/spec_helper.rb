@@ -4,7 +4,7 @@ require 'bundler/setup'
 require "mocha_standalone"
 require "bourne"
 
-require '../simulator/simulator.rb'
+require_relative '../simulator/simulator.rb'
 
 RSpec.configure do |config|
   config.mock_with :mocha
