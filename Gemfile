@@ -1,3 +1,6 @@
 source source "https://rubygems.org"
 
-gem "rake", :group => test
+group :test do 
+  gem 'rake'
+end
+
