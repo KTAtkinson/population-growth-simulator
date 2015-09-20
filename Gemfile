@@ -1,6 +1,8 @@
 source "https://rubygems.org"
 gem 'rspec'
 
+gemspec
+
 gem 'maruku'
 gem 'premailer'
 gem 'nokogiri' 
