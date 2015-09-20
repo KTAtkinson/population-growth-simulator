@@ -1,9 +1,12 @@
-require 'testing/unit'
-require 'simulator'
+require 'spec_helper'
 
-class TestBuild < Test::unit::TestCase
-  def testReturnNil
-    result = simulator.returnNil
-    assertEqual result, nil
+include 'simulator'
+
+describe returnNil do
+  context 'when called' do
+    it 'returns nil' do
+      output = returnNil
+      expect(output).to eq nil
+    end
   end
 end
