@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'Person' do
-  person  = Person('female', {'years':15, 'months':10, 'days':10})
+  person  = Person('female', {'years'=>15, 'months'=>10, 'days'=>10})
   
   describe 'age' do
     it 'increases the persons age by the given number of days' do
