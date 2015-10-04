@@ -1,3 +1,5 @@
+include Time
+
 module PopulationGrowthSimulator
   class Person
     def initialize(gender, age, health=100, health_modifier=1, ability=100, ability_modifier=1)
@@ -23,9 +25,13 @@ module PopulationGrowthSimulator
         @age[days] %= 30
       end
       if @age[months] > 12
-        @age[years] += @age[monts]/12
+        @age[years] += @age[months]/12
         @age[months] %= 12
       end
+    end
+    
+    def age?()
+      return Time.gm(year=@age[year], month=@age[month], day=@age[days]).to_i
     end
   end
 end
