@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Person' do
+describe Person do
   person  = Person('female', {'years'=>15, 'months'=>10, 'days'=>10})
   
   describe 'age' do
