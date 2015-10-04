@@ -1,7 +1,10 @@
 module PopulationGrowthSimulator
   class Gender
-    FEMALE = 0,
+    FEMALE = 0
     MALE = 1
+    
+    attr_reader :FEMALE
+    attr_reader :MALE
   end
   
   MILLI_PER_DAY = 86400000
