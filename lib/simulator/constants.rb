@@ -1,7 +1,7 @@
 module PopulationGrowthSimulator
   class Gender
-    FEMALE = 0
-    MALE = 1
+    @@FEMALE = 0
+    @@MALE = 1
     
     attr_reader :FEMALE
     attr_reader :MALE
