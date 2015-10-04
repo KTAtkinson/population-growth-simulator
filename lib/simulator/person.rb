@@ -1,5 +1,3 @@
-include Time
-
 module PopulationGrowthSimulator
   class Person
     def initialize(gender, age, health=100, health_modifier=1, ability=100, ability_modifier=1)
