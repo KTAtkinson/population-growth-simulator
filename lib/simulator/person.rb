@@ -9,27 +9,12 @@ module PopulationGrowthSimulator
       @ability_modifier = ability_modifier
     end
     attr_reader :gender
+    attr_reader :age
     
     public
-    def fage(format)
-      age.each {|incrament, value| format.gsub!('%' + incrament, value)}
-      return format
-    end
-    
-    def age(days=30)
-      @age[days] += days
-      if @age[days] > 30
-        @age[months] += @age[days]/30
-        @age[days] %= 30
-      end
-      if @age[months] > 12
-        @age[years] += @age[months]/12
-        @age[months] %= 12
-      end
-    end
-    
-    def age?()
-      return Time.gm(year=@age[year], month=@age[month], day=@age[days]).to_i
+    def increase_age(days=0, months=0, years=0)
+      adj = days*MILLI_PER_DAY + months*MILLI_PER_MONTH + years*MILLI_PERYEAR
+      @age += adj
     end
   end
 end
