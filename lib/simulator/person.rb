@@ -14,7 +14,7 @@ module PopulationGrowthSimulator
     public
     def increase_age(days=0, months=0, years=0)
       adj = (days*MILLI_PER_DAY) + (months*MILLI_PER_MONTH) + (years*MILLI_PER_YEAR)
-      age += adj
+      @age += adj
     end
     
     def get_age_tuple
