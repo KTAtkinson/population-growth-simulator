@@ -10,7 +10,7 @@ module PopulationGrowthSimulator
         age_by = 30
         new_age = person.age + (MILLI_PER_DAY * age_by)
         person.increase_age(days=age_by)
-        expect(person.age).to equal(new_age)
+        expect(person.age).to eq(new_age)
       end
     end
   end
