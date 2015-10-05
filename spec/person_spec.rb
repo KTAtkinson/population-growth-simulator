@@ -3,7 +3,7 @@ require 'spec_helper'
 module PopulationGrowthSimulator
 
   describe Person do
-    let(:person) {Person.new(Gender::FEMALE), 0}
+    let(:person) {Person.new(Gender::FEMALE, 0)}
     
     describe 'age' do
       it 'increases the persons age by the given number of days' do
