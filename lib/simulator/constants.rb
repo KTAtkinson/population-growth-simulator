@@ -1,8 +1,8 @@
 module PopulationGrowthSimulator
   
   module Gender
-    :FEMALE = 0
-    :MALE = 1
+    FEMALE = 0
+    MALE = 1
   end
   
   MILLI_PER_DAY = 86400000
