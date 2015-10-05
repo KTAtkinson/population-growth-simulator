@@ -16,5 +16,21 @@ module PopulationGrowthSimulator
       adj = days*MILLI_PER_DAY + months*MILLI_PER_MONTH + years*MILLI_PER_YEAR
       @age += adj
     end
+    
+    def get_age_tuple
+      years = @age/MILLI_PER_YEAR
+      remainder = @age/MILLI_PER_YEAR
+      
+      months = remainder/MILLI_PER_MONTH
+      remainder %= MILLI_PER_MONTH
+      
+      days = remainder
+
+      return [years, months, days]
+    
+    def fage
+      age_tuple = get_age_tuple
+      return "#{age_tuple[0]} years, #{age_tuple[1]} months, #{age_tuple[2]} days"
+    end
   end
 end
