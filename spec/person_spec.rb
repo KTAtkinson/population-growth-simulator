@@ -3,7 +3,7 @@ require 'spec_helper'
 module PopulationGrowthSimulator
 
   describe Person do
-    let(:age) {MILLI_PER_YEAR+MILLI_PER_MONTH+MILLI_PER_MONTH}
+    let(:age) {MILLI_PER_YEAR+MILLI_PER_MONTH+MILLI_PER_DAY}
     let(:person) {Person.new(Gender::FEMALE, age)}
     
     describe 'increase_age' do
