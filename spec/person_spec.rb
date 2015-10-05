@@ -5,12 +5,12 @@ module PopulationGrowthSimulator
   describe Person do
     let(:person) {Person.new(Gender::FEMALE, 0)}
     
-    describe 'age' do
+    describe 'increase_age' do
       it 'increases the persons age by the given number of days' do
         age_by = 30
-        new_age = person.age? + (86400000 * age_by)
-        person.age(age_by)
-        expect(person.age?).to equal(new_age)
+        new_age = person.age + (MILLI_PER_DAY * age_by)
+        person.increase_age(days=age_by)
+        expect(person.age).to equal(new_age)
       end
     end
   end
