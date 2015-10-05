@@ -3,7 +3,8 @@ require 'spec_helper'
 module PopulationGrowthSimulator
 
   describe Person do
-    let(:person) {Person.new(Gender::FEMALE, 0)}
+    let(:age) {MILLI_PER_YEAR+MILLI_PER_MONTH+MILLI_PER_MONTH}
+    let(:person) {Person.new(Gender::FEMALE, age)}
     
     describe 'increase_age' do
       it 'increases the persons age by the given number of days' do
@@ -13,6 +14,11 @@ module PopulationGrowthSimulator
         expect(person.age).to eq(new_age)
       end
     end
+    
+    describe 'get_age_tuple' do
+      it 'returns tuple containing years, month, age' do
+        expect(person.get_age_tuple).to eq([1, 1, 1])
+      end
   end
 end
   
