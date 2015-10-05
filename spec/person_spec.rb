@@ -16,7 +16,7 @@ module PopulationGrowthSimulator
       it 'increases the persons age by the given number of years' do
         age_by = 30
         new_age = person.age + (MILLI_PER_YEAR*age_by)
-        person.increatse_age(years=age_by)
+        person.increase_age(years=age_by)
         expect(person.age).to eq(new_age)
       end
     end
