@@ -19,6 +19,7 @@ module PopulationGrowthSimulator
       it 'returns tuple containing years, month, age' do
         expect(person.get_age_tuple).to eq([1, 1, 1])
       end
+    end
   end
 end
   
