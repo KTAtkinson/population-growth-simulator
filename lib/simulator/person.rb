@@ -27,6 +27,7 @@ module PopulationGrowthSimulator
       days = remainder
 
       return [years, months, days]
+    end
     
     def fage
       age_tuple = get_age_tuple
