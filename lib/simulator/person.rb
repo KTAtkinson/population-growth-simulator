@@ -18,10 +18,10 @@ module PopulationGrowthSimulator
     end
     
     def get_age_tuple
-      years = @age/MILLI_PER_YEAR.to_i
+      years = (@age/MILLI_PER_YEAR).to_i
       remainder = @age%MILLI_PER_YEAR
       
-      months = remainder/MILLI_PER_MONTH.to_i
+      months = (remainder/MILLI_PER_MONTH).to_i
       remainder %= MILLI_PER_MONTH
       
       days = remainder.to_i
