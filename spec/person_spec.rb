@@ -31,7 +31,7 @@ module PopulationGrowthSimulator
         years = 105
         months = 10
         days = 28
-        age = (years*MILI_PER_YEAR) + (months*MILLi_PER_MONTH) + (days*MILLI_PER_DAY)
+        age = (years*MILLI_PER_YEAR) + (months*MILLi_PER_MONTH) + (days*MILLI_PER_DAY)
         person = Person.new(Gender::FEMALE, age)
         expect(person.get_age_tuple).to eq([years, months, days])
       end
