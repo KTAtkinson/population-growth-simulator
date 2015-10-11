@@ -13,6 +13,7 @@ module PopulationGrowthSimulator
     
     public
     def increase_age(days=0, months=0, years=0)
+      puuts "Adjustment params: #{days}, #{months}, #{years}"
       adj = (days*MILLI_PER_DAY) + (months*MILLI_PER_MONTH) + (years*MILLI_PER_YEAR)
       puts "adjustment: #{adj}"
       @age += adj
