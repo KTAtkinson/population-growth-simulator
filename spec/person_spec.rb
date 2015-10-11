@@ -21,7 +21,7 @@ module PopulationGrowthSimulator
         person.increase_age(days=0, months=0, years=age_by)
         expect(person.age).to eq(new_age)
       end
-      if 'increases the persons age by the given number of months' do
+      it 'increases the persons age by the given number of months' do
         starting_age = 1000
         person = Person.new(Gender::FEMALE, starting_age)
         age_by = 30
@@ -29,7 +29,7 @@ module PopulationGrowthSimulator
         person.increase_age(days=0, months=age_by)
         expect(person.age).is eq(new_age)
       end
-      if "increases the persons age by given days/months/years" do
+      it "increases the persons age by given days/months/years" do
         starting_age = 1000
         person = Person.new(Gender::FEMALE, starting_age)
         days = 12
