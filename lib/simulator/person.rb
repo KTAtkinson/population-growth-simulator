@@ -1,12 +1,12 @@
 module PopulationGrowthSimulator
   class Person
-    def initialize(gender, age, health=100, health_modifier=1, ability=100, ability_modifier=1)
+    def initialize(gender, age, health=100, health_modifier=[], ability=100, ability_modifier=[])
       @gender = gender
       @age = age
       @health = health
-      @health_modifier = health_modifier
+      @health_modifiers = health_modifier
       @ability = ability
-      @ability_modifier = ability_modifier
+      @ability_modifiers = ability_modifier
     end
     attr_reader :gender
     attr_reader :age
@@ -27,6 +27,24 @@ module PopulationGrowthSimulator
       days = (remainder/MILLI_PER_DAY).to_i
 
       return [years, months, days]
+    end
+    
+    def get_health()
+      health = @health
+      @health_modifiers.each do |mod|
+        health *= mod.value
+      end
+      
+      return health
+    end
+    
+    def get_ability()
+      ability  = @ability
+      @ability_modifiers.each do |mod|
+        ability *= mod.value
+      end
+      
+      return health
     end
     
     def fage
