@@ -25,7 +25,6 @@ module PopulationGrowthSimulator
       remainder %= MILLI_PER_MONTH
       
       days = (remainder/MILLI_PER_DAY).to_i
-      puts "days: #{days}"
 
       return [years, months, days]
     end
