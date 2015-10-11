@@ -27,7 +27,7 @@ module PopulationGrowthSimulator
         age_by = 30
         new_age = starting_age + MILLI_PER_MONTH * age_by
         person.increase_age(days=0, months=age_by)
-        expect(person.age).is eq(new_age)
+        expect(person.age).to eq(new_age)
       end
       it "increases the persons age by given days/months/years" do
         starting_age = 1000
@@ -35,9 +35,9 @@ module PopulationGrowthSimulator
         days = 12
         months = 8
         years = 10
-        new_age = starting_age + MILLI_PER_DAY*days + MILLI_PER_MONTH*months + MILLI_PER_YEAR*pears
+        new_age = starting_age + MILLI_PER_DAY*days + MILLI_PER_MONTH*months + MILLI_PER_YEAR*years
         person.increase_age(days=days, months=months, years=years)
-        expect(person.age).is eq(new_age)
+        expect(person.age).to eq(new_age)
       end
     end
     
