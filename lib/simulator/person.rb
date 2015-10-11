@@ -13,7 +13,6 @@ module PopulationGrowthSimulator
     
     public
     def increase_age(days=0, months=0, years=0)
-      puts "Adjustment params: #{days}, #{months}, #{years}"
       adj = (days*MILLI_PER_DAY) + (months*MILLI_PER_MONTH) + (years*MILLI_PER_YEAR)
       puts "adjustment: #{adj}"
       @age += adj
@@ -22,11 +21,9 @@ module PopulationGrowthSimulator
     def get_age_tuple
       years = (@age/MILLI_PER_YEAR).to_i
       remainder = @age%MILLI_PER_YEAR
-      puts "years: #{years}, remainder: #{remainder}"
       
       months = (remainder/MILLI_PER_MONTH).to_i
       remainder %= MILLI_PER_MONTH
-      puts "months: #{months}, remainder: #{remainder}"
       
       days = (remainder/MILLI_PER_DAY).to_i
       puts "days: #{days}"
