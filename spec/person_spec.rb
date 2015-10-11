@@ -16,7 +16,7 @@ module PopulationGrowthSimulator
         person = Person.new(Gender::FEMALE, 0)
         age_by = 30
         new_age = MILLI_PER_YEAR*age_by
-        person.increase_age(years=age_by)
+        person.increase_age(days=0, months=0, years=age_by)
         expect(person.age).to eq(new_age)
       end
     end
